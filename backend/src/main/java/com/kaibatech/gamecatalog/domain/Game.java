@@ -29,5 +29,6 @@ public class Game {
     private Boolean completed;
     private Instant completion;
     private String notes;
+    private String imageUrl;
 
 }

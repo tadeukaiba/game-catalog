@@ -2,11 +2,8 @@
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
-      http://www.liquibase.org/xml/ns/pro
-      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
     <changeSet  author="tadeukaiba"  id="1">
         <createTable tableName="game">
@@ -21,6 +18,12 @@
             <column  name="notes"  type="varchar(255)"/>
         </createTable>
         <addAutoIncrement incrementBy="1" tableName="game" columnName="id" columnDataType="bigint" />
+    </changeSet>
+
+    <changeSet  author="tadeukaiba"  id="2">
+        <addColumn tableName="game">
+            <column  name="imageUrl"  type="varchar(255)"/>
+        </addColumn>
     </changeSet>
 
 </databaseChangeLog>

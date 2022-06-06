@@ -36,5 +36,6 @@ public class GameResource {
     private Instant completion;
 
     private String notes;
+    private String imageUrl;
 
 }
