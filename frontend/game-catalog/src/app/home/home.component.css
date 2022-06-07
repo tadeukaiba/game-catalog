@@ -1,0 +1,31 @@
+.game-card {
+  max-width: 400px;
+  margin: 6px;
+}
+
+.div-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 16px;
+}
+
+.my-games {
+  size: 1.6rem;
+  width: 100%;
+}
+
+.add-button {
+  margin-right: 30px;
+  width: 150px;
+}
+
+.game-completed-image {
+  background-image: url('https://png.vector.me/files/images/1/9/190154/checked_clip_art_preview.jpg');
+  background-size: cover;
+}
+
+.game-not-completed-image {
+  background-image: url('https://png.vector.me/files/images/1/7/171514/not_ok_mark_clip_art.jpg');
+  background-size: cover;
+}

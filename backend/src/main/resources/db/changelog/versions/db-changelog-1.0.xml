@@ -22,7 +22,7 @@
 
     <changeSet  author="tadeukaiba"  id="2">
         <addColumn tableName="game">
-            <column  name="imageUrl"  type="varchar(255)"/>
+            <column  name="image_url"  type="varchar(255)"/>
         </addColumn>
     </changeSet>
 

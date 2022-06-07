@@ -4,4 +4,29 @@
   </h1>
 </mat-toolbar>
 
+<div class="div-title">
+  <h1 class="my-games">My Games</h1>
+  <button mat-raised-button color="primary" class="add-button">Add Game</button>
+</div>
+
+<div style="padding: 13px; display: flex;">
+  <mat-spinner *ngIf="games.length === 0"></mat-spinner>
+
+  <mat-card *ngFor="let game of games" class="game-card">
+      <mat-card-header>
+          <div mat-card-avatar [ngClass]="game.completed == true ? 'game-completed-image' : 'game-not-completed-image'"></div>
+          <mat-card-title>{{game.title}}</mat-card-title>
+          <mat-card-subtitle>
+            {{game.console}} / {{game.year}}
+          </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{ game.imageUrl }}" />
+      <mat-card-content>
+          <p>
+              {{game.notes}}
+          </p>
+      </mat-card-content>
+  </mat-card>
+</div>
+
 <router-outlet></router-outlet>

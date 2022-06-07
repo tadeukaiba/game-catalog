@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  games = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getGames().subscribe((data: any[])=>{
+      console.log(data);
+      this.games = data;
+    });
   }
 
 }

@@ -1,10 +1,13 @@
+import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { MatToolbarModule,
   MatIconModule,
@@ -20,6 +23,7 @@ import { MatToolbarModule,
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -27,7 +31,9 @@ import { MatToolbarModule,
     MatCardModule,
     MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
